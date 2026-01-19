@@ -1,0 +1,310 @@
+<html class="light" lang="en"><head></head><body class="bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light font-display antialiased selection:bg-primary/30 selection:text-text-dark transition-colors duration-300">```html
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wellness Knowledge Blog - La Belle</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D3AD79",
+                        "primary-dark": "#b5952f",
+                        "background-light": "#f7f6f2",
+                        "background-dark": "#1a1a1a",
+                        "text-dark": "#1b170e",
+                        "text-light": "#f3f0e8",
+                        "stone-custom": "#958450",
+                        "coffee": "#4B3621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Noto Serif", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f6f2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e5e0d0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d1cbb8;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+    </style>
+
+
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<body class="bg-cream text-text-dark font-sans antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-md border-b border-coffee-brown/10 shadow-sm">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="flex h-24 items-center justify-between">
+<div class="flex items-center gap-3">
+<a href="index.html" class="block">
+    <img src="images/logo.png" alt="La Belle Logo" class="h-20 w-auto object-contain">
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+    <a class="text-sm font-normal text-text-dark/70 hover:text-soft-gold transition-colors tracking-wide" href="index.html">Home</a>
+    <a class="text-sm font-normal text-text-dark/70 hover:text-soft-gold transition-colors tracking-wide" href="services.html">Services & Menu</a>
+    
+    <a class="text-sm font-normal text-text-dark/70 hover:text-soft-gold transition-colors tracking-wide" href="packages.html">Packages</a>
+
+    <a class="text-sm font-normal text-text-dark/70 hover:text-soft-gold transition-colors tracking-wide" href="about.html">About Us</a>
+    <a class="text-sm font-medium text-[#D3AD79] tracking-wide border-b border-[#D3AD79] pb-0.5" href="blog.html">Wellness Blog</a>
+    <a class="text-sm font-normal text-text-dark/70 hover:text-soft-gold transition-colors tracking-wide" href="contact.html">Contact</a>
+</nav>
+
+<div class="hidden md:block">
+    <button class="bg-[#D3AD79] hover:bg-[#bfa035] text-white text-sm font-semibold py-3 px-7 rounded-none uppercase tracking-widest transition-all duration-300 shadow-md">
+        Book Now
+    </button>
+</div>
+<button class="lg:hidden text-text-dark dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center w-full">
+<section class="w-full max-w-5xl px-6 pt-16 pb-8 md:pt-24 md:pb-12 text-center">
+<span class="inline-block mb-3 text-primary font-bold tracking-widest text-xs uppercase">The Wellness Journal</span>
+<h1 class="text-4xl md:text-5xl font-serif font-light text-text-dark dark:text-white mb-4 leading-tight">
+                    Curated insights for a <br class="hidden md:block"/> <i class="font-serif italic text-stone-custom">balanced life</i>.
+                </h1>
+<p class="text-stone-600 dark:text-stone-400 max-w-xl mx-auto text-lm leading-relaxed">
+                    บทความ ที่รวบรวมเรื่องการมีสติ การบำบัดร่างกาย และศาสตร์แห่งการดูแลตนเอง
+                </p>
+</section>
+<section class="w-full max-w-5xl px-6 pb-12">
+<div class="flex flex-wrap justify-center gap-4 mb-16">
+    <button onclick="filterPosts('all', this)" class="filter-btn px-8 py-3 rounded-full border border-transparent bg-[#C5A059] text-white font-medium transition-all hover:shadow-lg">
+        All
+    </button>
+    <button onclick="filterPosts('body', this)" class="filter-btn px-8 py-3 rounded-full border border-gray-200 bg-white text-gray-600 font-medium transition-all hover:border-[#C5A059] hover:text-[#C5A059]">
+        Body
+    </button>
+    <button onclick="filterPosts('mind', this)" class="filter-btn px-8 py-3 rounded-full border border-gray-200 bg-white text-gray-600 font-medium transition-all hover:border-[#C5A059] hover:text-[#C5A059]">
+        Mind
+    </button>
+    <button onclick="filterPosts('rituals', this)" class="filter-btn px-8 py-3 rounded-full border border-gray-200 bg-white text-gray-600 font-medium transition-all hover:border-[#C5A059] hover:text-[#C5A059]">
+        Rituals
+    </button>
+    <button onclick="filterPosts('products', this)" class="filter-btn px-8 py-3 rounded-full border border-gray-200 bg-white text-gray-600 font-medium transition-all hover:border-[#C5A059] hover:text-[#C5A059]">
+        Peace
+    </button>
+</div>
+</section>
+
+<section class="w-full max-w-6xl px-6 mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+<article class="blog-item rituals flex flex-col gap-5 cursor-pointer group">
+    <div class="overflow-hidden rounded-xl aspect-[4/3] w-full relative">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('images/Doterra.jpg')"></div>
+        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide text-[#1c1917]">Rituals</div>
+    </div>
+
+    <div class="flex flex-col gap-2 pr-4">
+        <h3 class="font-serif text-2xl text-[#1c1917] group-hover:text-[#C5A059] transition-colors leading-tight">
+            The Art of Aromatherapy: Choosing Your Scent
+        </h3>
+        
+        <p id="text-rituals-1" class="text-stone-600 dark:text-stone-400 line-clamp-4 leading-relaxed transition-all duration-500">
+            ที่ La Belle เราเลือกใช้น้ำมันหอมระเหยจาก doTERRA เพื่อเสริมประสบการณ์การบำบัดให้มีคุณภาพและสม่ำเสมอ 
+            น้ำมันหอมระเหยแต่ละกลิ่นถูกคัดสรรจากพืชธรรมชาติ และผ่านการตรวจสอบคุณภาพอย่างพิถีพิถัน 
+            เมื่อใช้ร่วมกับการนวดและพิธีกรรมการดูแล กลิ่นหอมจะช่วยผ่อนคลายระบบประสาท ลดความตึงเครียด และปรับสมดุลทั้งร่างกายและจิตใจ
+            <br><br>
+            บทความนี้จะพาคุณทำความเข้าใจศิลปะของอโรมาเธอราพี และการเลือกกลิ่นที่เหมาะกับความต้องการของคุณ
+        </p>
+
+        <div class="mt-2 flex items-center justify-between">
+            <button onclick="toggleReadMore('text-rituals-1', this)" class="inline-flex items-center gap-1 text-[#C5A059] font-medium hover:text-[#b08d4b] hover:underline transition-all group-hover:translate-x-1 outline-none">
+                Read more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+            <span class="text-xs text-gray-400 font-medium">Oct 12 • 5 min read</span>  
+        </div>
+    </div>
+</article>
+<article class="blog-item body flex flex-col gap-5 cursor-pointer group">
+    <div class="overflow-hidden rounded-xl aspect-[4/3] w-full relative">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('images/body.jpg')"></div>
+        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide text-[#1c1917]">
+            Body
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 pr-4">
+        <h3 class="font-serif text-2xl text-[#1c1917] group-hover:text-[#C5A059] transition-colors leading-tight">
+            Why Massage Works: Benefits, Results & Who It’s For
+        </h3>
+        
+        <p id="text-body-1" class="text-stone-600 dark:text-stone-400 line-clamp-4 leading-relaxed transition-all duration-500">
+            การนวดที่ทำอย่างถูกวิธีช่วยปลดล็อกความตึงของกล้ามเนื้อ กระตุ้นการไหลเวียน และลดความเครียดของระบบประสาท ผลลัพธ์ที่พบได้บ่อยคือความรู้สึกผ่อนคลาย โล่งตัว เคลื่อนไหวได้คล่องตัวและการพักผ่อนที่มีคุณภาพขึ้น
+            <br><br>
+            เหมาะสำหรับผู้ที่มีออฟฟิศซินโดรม เล่นกีฬาหนัก เมื่อยล้าสะสม หรืออยากดูแลสุขภาพแบบต่อเนื่อง พร้อมแนวทางสำหรับผู้ที่ควรหลีกเลี่ยงหรือควรปรึกษาแพทย์ก่อนเข้ารับบริการ
+        </p>
+
+        <div class="mt-2 flex items-center justify-between">
+            <button onclick="toggleReadMore('text-body-1', this)" class="inline-flex items-center gap-1 text-[#C5A059] font-medium hover:text-[#b08d4b] hover:underline transition-all group-hover:translate-x-1 outline-none">
+                Read more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+            <span class="text-xs text-gray-400 font-medium">Oct 08 • 3 min read</span>
+        </div>
+    </div>
+</article>
+<article class="blog-item mind flex flex-col gap-5 cursor-pointer group">
+    <div class="overflow-hidden rounded-xl aspect-[4/3] w-full relative">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('images/yoga.png')"></div>
+        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide text-[#1c1917]">
+            Mind
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 pr-4">
+        <h3 class="font-serif text-2xl text-[#1c1917] group-hover:text-[#C5A059] transition-colors leading-tight">
+            Mindfulness in Motion: Stretching Routines
+        </h3>
+        
+        <p id="text-mind-1" class="text-stone-600 dark:text-stone-400 line-clamp-4 leading-relaxed transition-all duration-500">
+            การยืดเหยียดร่างกาย เป็นวิธีดูแลสุขภาพที่เรียบง่ายแต่ได้ผล โดยช่วยคลายความตึงของกล้ามเนื้อ กระตุ้นการไหลเวียนโลหิต และทำให้ร่างกายเคลื่อนไหวได้อย่างเป็นธรรมชาติมากขึ้น
+            <br><br>
+            การยืดเหยียดสามารถทำได้ทั้ง ช่วงเช้าเพื่อปลุกร่างกาย หรือระหว่างวันโดยเฉพาะผู้ที่นั่งทำงานนานๆ และ หลังการนวด เพื่อคงผลลัพธ์ของการบำบัด ควรใช้เวลาประมาณ 5–10 นาทีต่อครั้ง โดยไม่จำเป็นต้องออกแรงมาก แต่เน้นการเคลื่อนไหวช้า ๆ ควบคู่กับการหายใจอย่างสม่ำเสมอ
+            <br><br>
+            บริเวณที่ควรยืดเป็นประจำ ได้แก่ คอ บ่า ไหล่ หลังส่วนบน สะโพก และต้นขา ซึ่งเป็นจุดที่มักเกิดความตึงสะสมจากการใช้งานในชีวิตประจำวัน การยืดอย่างสม่ำเสมอจะช่วยลดความเสี่ยงของอาการปวดเรื้อรัง และเพิ่มความยืดหยุ่นของกล้ามเนื้อในระยะยาว
+            <br><br>
+            หลังการนวด แนะนำให้ยืดเหยียดเบา ๆ ดื่มน้ำให้เพียงพอ และหลีกเลี่ยงการใช้งานกล้ามเนื้อหนักในช่วง 24 ชั่วโมงแรก เพื่อให้ร่างกายได้ฟื้นฟูอย่างเต็มที่ และรักษาความสบายที่ได้รับจากการบำบัดให้อยู่กับคุณได้นานขึ้น
+        </p>
+
+        <div class="mt-2 flex items-center justify-between">
+            <button onclick="toggleReadMore('text-mind-1', this)" class="inline-flex items-center gap-1 text-[#C5A059] font-medium hover:text-[#b08d4b] hover:underline transition-all group-hover:translate-x-1 outline-none">
+                Read more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+            <span class="text-xs text-gray-400 font-medium">Sep 28 • 6 min read</span>
+        </div>
+    </div>
+</article>
+<article class="blog-item products flex flex-col gap-5 cursor-pointer group">
+    <div class="overflow-hidden rounded-xl aspect-[4/3] w-full relative">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('images/clam.jpg')"></div>
+        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide text-[#1c1917]">
+            Peace
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 pr-4">
+        <h3 class="font-serif text-2xl text-[#1c1917] group-hover:text-[#C5A059] transition-colors leading-tight">
+            The Power of Silence: Finding Peace
+        </h3>
+        
+        <p id="text-products-1" class="text-stone-600 dark:text-stone-400 line-clamp-4 leading-relaxed transition-all duration-500">
+            ท่ามกลางความวุ่นวายของโลกยุคปัจจุบัน "ความเงียบ" กลับกลายเป็นสิ่งที่หรูหราและหายากที่สุด 
+    การพาตัวเองเข้าสู่พื้นที่แห่งความสงบไม่ได้หมายถึงเพียงแค่การตัดขาดจากเสียงรบกวนภายนอก 
+    แต่คือช่วงเวลาอันศักดิ์สิทธิ์ที่จิตใจจะได้หยุดพักจากการประมวลผลข้อมูลที่ถาโถม 
+    เพื่อรีเซ็ตระบบประสาทและคืนสมดุลให้กลับสู่สภาวะปกติ
+            <br><br>
+           การโอบกอดความเงียบสงบจะช่วยลดระดับความตึงเครียด ชะลอจังหวะการเต้นของหัวใจให้ราบรื่น 
+    และเปิดโอกาสให้เราได้กลับมาเชื่อมโยงกับความรู้สึกภายในของตนเองอย่างลึกซึ้งอีกครั้ง 
+    ที่ La Belle เราบรรจงสร้างสรรค์บรรยากาศที่เงียบสงบในทุกอณู เพื่อให้ทุกวินาทีของคุณคือการพักผ่อนที่แท้จริง 
+    นำพาความกระจ่างใสและพลังบวกกลับคืนสู่จิตวิญญาณ
+        </p>
+
+        <div class="mt-2 flex items-center justify-between">
+            <button onclick="toggleReadMore('text-products-1', this)" class="inline-flex items-center gap-1 text-[#C5A059] font-medium hover:text-[#b08d4b] hover:underline transition-all group-hover:translate-x-1 outline-none">
+                Read more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+            <span class="text-xs text-gray-400 font-medium">Sep 15 • 4 min read</span>
+        </div>
+    </div>
+</article>
+</div>
+</section>
+<section class="w-full bg-[#1b170e] text-[#f7f6f2] py-24 px-6 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23dfb22a\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<span class="material-symbols-outlined text-5xl text-stone-custom mb-6">format_quote</span>
+<blockquote class="font-serif text-3xl md:text-3xl italic leading-tight mb-8 text-white/90">
+                        "การใส่ใจร่างกายไม่ใช่เรื่องฟุ่มเฟือย แต่คือการสร้างความแข็งแรงให้ทั้งกายและใจในระยะยาว"
+                    </blockquote>
+<cite class="not-italic text-primary font-bold tracking-widest text-sm uppercase">— La Belle — </cite>
+</div>
+</section>
+
+</main>
+
+<a href="https://line.me/ti/p/@labellechonburi" target="_blank" class="fixed bottom-8 right-8 z-[100] transition-transform hover:scale-110">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="Chat on LINE" class="w-16 h-16 shadow-lg rounded-full">
+</a>
+</div>
+<script>
+    function filterPosts(category, btnElement) {
+        // 1. เปลี่ยนสีปุ่ม (เหมือนเดิม)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('bg-[#C5A059]', 'text-white', 'border-transparent');
+            btn.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+        });
+        
+        // ใส่สีให้ปุ่มที่กด (ถ้ามีปุ่มส่งมา)
+        if (btnElement) {
+            btnElement.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+            btnElement.classList.add('bg-[#C5A059]', 'text-white', 'border-transparent');
+        }
+
+        // 2. กรองบทความ (ใช้ไม้ตาย style.display)
+        const posts = document.querySelectorAll('.blog-item');
+        
+        posts.forEach(post => {
+            const isMatch = category === 'all' || post.classList.contains(category);
+            
+            if (isMatch) {
+                // ถ้าตรงหมวด: สั่งให้โชว์เดี๋ยวนี้! (Force Show)
+                post.style.display = 'flex';
+            } else {
+                // ถ้าไม่ตรง: สั่งให้หายตัวไปเดี๋ยวนี้! (Force Hide)
+                post.style.display = 'none';
+            }
+        });
+    }
+</script>
+<script>
+    function toggleReadMore(elementId, btn) {
+        // 1. หาตัวข้อความที่เราจะสั่งการ
+        const textElement = document.getElementById(elementId);
+        
+        // 2. เช็คว่าตอนนี้ "สั้น" หรือ "ยาว" อยู่?
+        if (textElement.classList.contains('line-clamp-4')) {
+            // ถ้าสั้นอยู่ -> สั่งให้ "ยืดออก" (เอา line-clamp ออก)
+            textElement.classList.remove('line-clamp-4');
+            textElement.classList.remove('line-clamp-2'); // เผื่อมีอันนี้ด้วย
+            
+            // เปลี่ยนคำในปุ่มเป็น "Read less" (ถ้าต้องการ)
+            btn.innerHTML = 'Read less <span class="material-symbols-outlined text-sm rotate-180">arrow_forward</span>';
+        } else {
+            // ถ้ายาวอยู่ -> สั่งให้ "หดกลับ"
+            textElement.classList.add('line-clamp-4');
+            
+            // เปลี่ยนคำกลับเป็น "Read more"
+            btn.innerHTML = 'Read more <span class="material-symbols-outlined text-sm">arrow_forward</span>';
+        }
+    }
+</script>
+</body></html>

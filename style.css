@@ -1,0 +1,257 @@
+/* Shared Styles for La Belle Massage & Spa */
+
+/* Material Symbols Configuration */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f7f6f2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e5e5e5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dfb22a;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* Luxury Divider */
+.luxury-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #dfb22a 50%, transparent 100%);
+    opacity: 0.3;
+}
+
+/* Map Filter */
+.map-filter {
+    filter: grayscale(100%) sepia(20%) brightness(95%) contrast(90%);
+}
+
+/* Font Families */
+.font-serif {
+    font-family: 'Noto Serif', serif;
+}
+
+.font-display {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Luxury Border */
+.luxury-border {
+    border: 1px solid rgba(223, 178, 42, 0.3);
+}
+
+/* Luxury Shadow */
+.luxury-shadow {
+    box-shadow: 0 4px 20px -2px rgba(27, 23, 14, 0.05);
+}
+
+/* Elegant Input */
+.input-elegant {
+    background-color: transparent;
+    border-bottom: 1px solid #d1d1d1;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.input-elegant:focus {
+    border-bottom-color: #dfb22a;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Selection */
+.selection\:bg-primary\/30::selection {
+    background-color: rgba(212, 175, 55, 0.3);
+}
+
+.selection\:text-text-dark::selection {
+    color: #1b170e;
+}
+
+/* Dark mode specific styles */
+.dark .luxury-border {
+    border-color: rgba(223, 178, 42, 0.2);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .hidden.md\:block {
+        display: none;
+    }
+    
+    .md\:hidden {
+        display: block;
+    }
+}
+
+/* Animation utilities */
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hover effects */
+.group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+}
+
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+/* Transition utilities */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Custom shadow utilities */
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Custom shadows for brand colors */
+.shadow-brand-gold-light {
+    box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.39);
+}
+
+.shadow-brand-gold-medium {
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.23);
+}
+
+.shadow-line-green-light {
+    box-shadow: 0 8px 24px rgba(6, 199, 85, 0.4);
+}
+
+.shadow-line-green-medium {
+    box-shadow: 0 12px 32px rgba(6, 199, 85, 0.5);
+}
+
+.shadow-dark-small {
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-dark-medium {
+    box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Backdrop blur utilities */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}
+
+/* Transform utilities */
+.hover\:-translate-y-0\.5:hover {
+    transform: translateY(-0.125rem);
+}
+
+.hover\:-translate-y-1:hover {
+    transform: translateY(-0.25rem);
+}
+
+.hover\:-translate-y-3\/4:hover {
+    transform: translateY(-0.75rem);
+}
+
+/* Scale utilities */
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+}
+
+.active\:scale-95:active {
+    transform: scale(0.95);
+}
+
+/* Custom background patterns */
+.bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dfb22a' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
