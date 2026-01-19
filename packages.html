@@ -491,12 +491,17 @@
     }
 </script>
 <script>
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
+    // ใส่เครื่องหมายปีกกา { } ครอบไว้ เพื่อสร้างห้องส่วนตัว ไม่ให้ตีกับคนอื่น
+    {
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex'); // เพิ่ม flex เพื่อให้จัดเรียงแนวตั้งสวยๆ
-    });
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        }
+    }
 </script>
 </body></html>
