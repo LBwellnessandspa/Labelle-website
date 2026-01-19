@@ -66,10 +66,18 @@
                             Book Now
                         </button>
 </div>
-<button class="md:hidden p-2 text-text-dark hover:text-soft-gold transition-colors">
-<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+<button id="mobile-menu-btn" class="md:hidden p-2 text-text-dark hover:text-soft-gold transition-colors focus:outline-none">
+    <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
 </button>
 </div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#faf9f6] border-b border-soft-gold/20 shadow-lg flex-col p-6 gap-4 z-50">
+    <a href="index.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Home</a>
+    <a href="services.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Services & Menu</a>
+    <a href="packages.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Packages</a>
+    <a href="about.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">About Us</a>
+    <a href="blog.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Wellness Blog</a>
+    <a href="contact.html" class="text-lg font-serif text-text-dark hover:text-soft-gold pb-2">Contact</a>
 </div>
 </header>
 <main class="flex-grow pt-24">
@@ -411,50 +419,47 @@
     
     <div class="absolute inset-0 cursor-pointer" onclick="closeModal()"></div>
 
-    <div class="relative w-full max-w-[550px] bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[1.5px] border-soft-gold/40 overflow-hidden flex flex-col sm:flex-row transform transition-all duration-300 scale-100">
+    <div class="relative w-full max-w-[280px] bg-white rounded-xl shadow-2xl border border-soft-gold/40 overflow-hidden flex flex-col transition-all transform scale-100">
     
-    <button onclick="closeModal()" class="absolute top-2 right-2 z-10 p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-full hover:bg-gray-100 outline-none">
-        <span class="material-symbols-outlined text-xl font-light">close</span>
+    <button onclick="closeModal()" class="absolute top-2 right-2 z-20 p-1 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 hover:bg-white transition-all shadow-sm cursor-pointer">
+        <span class="material-symbols-outlined text-lg font-bold">close</span>
     </button>
 
-    <div class="w-full sm:w-2/5 min-h-[180px] sm:min-h-full relative overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" 
-             style="background-image: url('images/popup.jpg')">
-        </div>
+    <div class="w-full h-[130px] relative shrink-0">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/popup.jpg')"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
     </div>
 
-    <div class="w-full sm:w-3/5 p-6 flex flex-col justify-center items-center text-center">
+    <div class="w-full p-4 flex flex-col items-center text-center bg-white relative z-10">
         
         <div class="mb-1">
-            <span class="text-[12px] uppercase tracking-[0.2em] font-medium text-soft-gold mb-2 block">สำหรับลูกค้าใหม่</span>
+            <span class="text-[9px] uppercase tracking-[0.15em] font-bold text-[#CBA771] block">สำหรับลูกค้าใหม่</span>
         </div>
 
-        <h2 class="text-[#4a3c30] text-2xl font-light tracking-tight mb-3">
+        <h2 class="text-[#4a3c30] text-lg font-medium tracking-tight mb-2">
             Welcome to <span class="font-bold">La Belle</span>
         </h2>
 
-        <div class="w-8 h-[1px] bg-soft-gold/30 mb-4"></div>
+        <div class="w-8 h-[1px] bg-[#CBA771]/30 mb-3"></div>
 
-        <p class="text-gray-600 text-xs leading-relaxed mb-4 max-w-[220px]">
-            Experience tranquility with a special welcome gift for your first visit.
+        <p class="text-gray-500 text-[10px] leading-relaxed mb-4 px-1">
+            รับของขวัญพิเศษสำหรับการมาเยือนครั้งแรก
         </p>
 
-        <div class="mb-5 bg-[#F9F9F9] px-4 py-2 rounded border border-gray-200">
-            <p class="text-[#4a3c30] text-xl font-bold tracking-tight">
-                ส่วนลด 10% 
-            </p>
+        <div class="w-full mb-4 bg-[#faf9f6] py-2 px-3 rounded border border-dashed border-[#CBA771]/30">
+            <p class="text-[#4a3c30] text-base font-bold tracking-tight">ส่วนลด 10%</p>
         </div>
 
-        <div class="w-full space-y-2">
-            <a href="https://line.me/ti/p/@labellechonburi" target="_blank" class="w-full flex items-center justify-center rounded-md h-10 px-4 bg-[#4a3c30] hover:bg-[#382e25] text-white text-[10px] font-bold tracking-widest uppercase transition-all shadow-sm hover:shadow-md no-underline">
-    Book Now
-</a>
-            
-            <button onclick="closeModal()" class="w-full text-gray-400 text-[9px] font-medium tracking-wide hover:text-[#4a3c30] transition-colors">
-                No thanks
-            </button>
-        </div>
+        <a href="https://line.me/ti/p/@labellechonburi" target="_blank" class="w-full block bg-[#4a3c30] hover:bg-[#382d24] text-white text-[10px] font-bold py-2.5 rounded uppercase tracking-widest transition-all shadow-sm hover:shadow-md cursor-pointer text-decoration-none">
+            รับสิทธิ์จองเลย
+        </a>
+
+        <button onclick="closeModal()" class="mt-3 text-[9px] text-gray-300 hover:text-gray-500 underline cursor-pointer bg-transparent border-none">
+            No thanks
+        </button>
     </div>
+
+</div>
 
 </div>
 </div>
@@ -485,6 +490,15 @@
             }, 500);
         }
     }
+</script>
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex'); // เพิ่ม flex เพื่อให้จัดเรียงแนวตั้งสวยๆ
+    });
 </script>
 </body>
 </html>
