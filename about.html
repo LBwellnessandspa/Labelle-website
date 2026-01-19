@@ -64,9 +64,17 @@
         Book Now
     </button>
 </div>
-<button class="md:hidden text-text-dark dark:text-white">
-<span class="material-symbols-outlined">menu</span>
+<button id="mobile-menu-btn" class="md:hidden p-2 text-text-dark hover:text-soft-gold transition-colors focus:outline-none">
+    <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
 </button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#faf9f6] border-b border-soft-gold/20 shadow-lg flex-col p-6 gap-4 z-50">
+    <a href="index.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Home</a>
+    <a href="services.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Services & Menu</a>
+    <a href="packages.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Packages</a>
+    <a href="about.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">About Us</a>
+    <a href="blog.html" class="text-lg font-serif text-text-dark hover:text-soft-gold border-b border-gray-100 pb-2">Wellness Blog</a>
+    <a href="contact.html" class="text-lg font-serif text-text-dark hover:text-soft-gold pb-2">Contact</a>
 </div>
 </header>
 <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
@@ -255,4 +263,13 @@
 <a href="https://line.me/ti/p/@labellechonburi" target="_blank" class="fixed bottom-8 right-8 z-[100] transition-transform hover:scale-110">
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="Chat on LINE" class="w-16 h-16 shadow-lg rounded-full">
 </a>
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex'); // เพิ่ม flex เพื่อให้จัดเรียงแนวตั้งสวยๆ
+    });
+</script>
 </body></html>
